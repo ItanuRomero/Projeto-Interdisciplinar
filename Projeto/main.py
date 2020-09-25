@@ -1,9 +1,9 @@
 import menu_functions as menu
 import interface
 import database as bd
-bd.createBanco('bd_pinatalk.db')
-bd.inserirCategoria('bd_pinatalk.db')
-# interface.limpa_tela()
+bd.create_banco('bd_pinatalk.db')
+bd.inserir_categoria('bd_pinatalk.db')
+interface.limpa_tela()
 while True:
     option_user = menu.create_menu()
     if option_user == 1:

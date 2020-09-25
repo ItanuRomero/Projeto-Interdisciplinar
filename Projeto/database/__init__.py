@@ -1,7 +1,8 @@
 import sqlite3
 from sqlite3 import Error
 
-def createBanco(db_file):
+
+def create_banco(db_file):
     conn = None 
     try:
         conn = sqlite3.connect(db_file)
@@ -11,7 +12,6 @@ def createBanco(db_file):
                             descricao text NOT NULL
                         );
                     ''')
-        conn.commit()
         conn.commit()
         c.execute('''CREATE TABLE IF NOT EXISTS 
                         pergunta (
@@ -30,13 +30,15 @@ def createBanco(db_file):
                         ); 
                     ''')
         conn.commit()   
-    except Error as e:
-        print(e)
+    except Error as erro:
+        print(f'Encontramos um erro, verifique abaixo:\n'
+              f'{erro}')
     finally:
         if conn:
             conn.close()    
 
-def inserirCategoria(db_file):
+
+def inserir_categoria(db_file):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
