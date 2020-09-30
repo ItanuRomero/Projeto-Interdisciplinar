@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde7e1d7-898b-4bcf-bb85-cae95edb244f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Projeto-Interdisciplinar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto-Interdisciplinar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/database/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/database/exemplo_prof.py" beforeDir="false" afterPath="$PROJECT_DIR$/LP/exemplo_prof.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
