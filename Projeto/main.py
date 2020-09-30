@@ -18,10 +18,10 @@ while True:
         break
 
     if userType == '1':
-        Administrador.initialize()
+        administrador.initialize()
         
     if userType == '2':
-        Visitor.initialize()
+        visitor.initialize()
 
     if userType not in options:
         print('\nCódigo inserido não é inválido\n')
