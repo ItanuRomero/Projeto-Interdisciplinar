@@ -36,7 +36,7 @@ def initialize_visitor():
     while True:
         print(f'\nPergunta selecionada: {response[0][1]}')
 
-        answers = select_all_questions_by_category(selected_category_id)
+        answers = select_all_answers_by_question_id(selected_category_id)
 
         print('ID \tDescrição')
         for item in range(len(answers)):

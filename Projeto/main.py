@@ -1,8 +1,8 @@
-from database import *
+from database import initialize
 import administrator
 import visitor
 
-
+initialize()
 print('Bem vindo ao PinaTalk!\n')
 while True:
     print('\nQual tipo de usuário você é?\n')
