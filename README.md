@@ -1,6 +1,18 @@
-# Projeto-Interdisciplinar
- Projeto composto por 5 materias 2o semestre ADS.
+# PINA_TALK
 
-# free acess
+## Para mais informações favor verificar o documento que ficará disponível em uma das pastas acima!
 
-**tente sempre criar uma nova branch para adicionar suas modificacoes**
+### Idealizado e realizado em conjunto com os alunos:
+- Gabriel Souza Pereira 
+    - [Github]() & [LinkedIn]()
+- Gabriel Henrique Gigante
+    - [Github]() & [LinkedIn]()
+- Itanú Romero 
+    - [Github]() & [LinkedIn]()
+- Saulo Martins 
+    - [Github]() & [LinkedIn]()
+- Priscila Barros 
+    - [Github]() & [LinkedIn]()
+
+Projeto interdisciplinar realizado no período do segundo semestre do curso de
+**Análise e Desenvolvimento de Sistemas (ADS) do Instituto Federal de Ciência e Tecnologia de São Paulo (IFSP)**
