@@ -5,8 +5,8 @@
 ### Idealizado e realizado em conjunto com os alunos:
 - Gabriel Souza Pereira 
     - [Github]() & [LinkedIn]()
-- Gabriel Henrique Gigante
-    - [Github]() & [LinkedIn]()
+- Gabriel Henrique Gigante da Silva 
+    - [Github](http://github.com/gagigante) & [LinkedIn](https://www.linkedin.com/in/gabriel-gigante/)
 - Itanú Romero 
     - [Github]() & [LinkedIn]()
 - Saulo Martins 
