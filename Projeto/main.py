@@ -1,6 +1,6 @@
 from database import *
-import Administrator
-import Visitor
+import administrator
+import visitor
 
 print('Bem vindo ao PinaTalk!\n')
 
