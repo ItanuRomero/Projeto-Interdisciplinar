@@ -1,28 +1,30 @@
 import sqlite3
 
-database = 'database/database.db'
-conn = sqlite3.connect(database)
-c = conn.cursor()
 
-c.execute('''CREATE TABLE IF NOT EXISTS categoria (
-  descricao TEXT NOT NULL
-);''')
-conn.commit()
+def initialize():
+    database = './database.db'
+    conn = sqlite3.connect(database)
+    c = conn.cursor()
 
-c.execute('''CREATE TABLE IF NOT EXISTS pergunta (
-  id_categoria INTEGER NOT NULL,
-  descricao TEXT NOT NULL,
-  FOREIGN KEY (id_categoria) REFERENCES categoria(rowid) ON UPDATE CASCADE ON DELETE CASCADE
-);''')
-conn.commit()
+    c.execute('''CREATE TABLE IF NOT EXISTS categoria (
+      descricao TEXT NOT NULL
+    );''')
+    conn.commit()
 
-c.execute('''CREATE TABLE IF NOT EXISTS resposta (
-  id_pergunta INTEGER PRIMARY KEY,
-  descricao TEXT NOT NULL,
-  favorito int DEFAULT 0,
-  FOREIGN KEY (id_pergunta) REFERENCES pergunta(rowid) ON UPDATE CASCADE ON DELETE CASCADE
-);''')
-conn.commit()
+    c.execute('''CREATE TABLE IF NOT EXISTS pergunta (
+      id_categoria INTEGER NOT NULL,
+      descricao TEXT NOT NULL,
+      FOREIGN KEY (id_categoria) REFERENCES categoria(rowid) ON UPDATE CASCADE ON DELETE CASCADE
+    );''')
+    conn.commit()
+
+    c.execute('''CREATE TABLE IF NOT EXISTS resposta (
+      id_pergunta INTEGER PRIMARY KEY,
+      descricao TEXT NOT NULL,
+      favorito int DEFAULT 0,
+      FOREIGN KEY (id_pergunta) REFERENCES pergunta(rowid) ON UPDATE CASCADE ON DELETE CASCADE
+    );''')
+    conn.commit()
 
 
 def select_category_by_id(category_id):

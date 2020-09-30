@@ -1,7 +1,7 @@
 from database import *
 
 
-def initialize():           
+def initialize_administrator():
     while True:
         options = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
