@@ -1,5 +1,4 @@
 import sqlite3
-from sqlite3 import Error
 
 database = 'database/database.db'
 conn = sqlite3.connect(database)
@@ -25,56 +24,67 @@ c.execute('''CREATE TABLE IF NOT EXISTS resposta (
 );''')
 conn.commit()
 
-def selectCategoryById(categoryId):
-  c.execute("SELECT rowid, descricao FROM categoria WHERE rowid = ?;", str(categoryId))
-  return c.fetchall()
 
-def selectAllCategories():
-  c.execute("SELECT rowid, descricao FROM categoria;")
-  return c.fetchall()
-
-def insertCategory(category):
-  c.execute(f"INSERT INTO categoria VALUES('{category}');")
-  conn.commit()
-
-def deleteCategory(categoryId):
-  c.execute(f"DELETE FROM categoria WHERE rowid = ?;", str(categoryId))
-  conn.commit()
+def select_category_by_id(category_id):
+    c.execute("SELECT rowid, descricao FROM categoria WHERE rowid = ?;", str(category_id))
+    return c.fetchall()
 
 
-def selectQuestionById(questionId):
-  c.execute("SELECT rowid, descricao FROM pergunta WHERE rowid = ?;", str(questionId))
-  return c.fetchall()
-
-def selectAllQuestionsByCategory(categoryId):
-  c.execute("SELECT rowid, descricao FROM pergunta WHERE id_categoria = ?;", str(categoryId))
-  return c.fetchall()
-
-def insertQuestion(categoryId, question):
-  c.execute(f"INSERT INTO pergunta VALUES('{categoryId}', '{question}');")
-  conn.commit()
-
-def deleteQuestion(questionId):
-  c.execute(f"DELETE FROM pergunta WHERE rowid = ?;", str(questionId))
-  conn.commit()
+def select_all_categories():
+    c.execute("SELECT rowid, descricao FROM categoria;")
+    return c.fetchall()
 
 
-def selectAnswerById(answerId):
-  c.execute("SELECT rowid, descricao FROM resposta WHERE rowid = ?;", str(answerId))
-  return c.fetchall()
+def insert_category(category):
+    c.execute(f"INSERT INTO categoria VALUES('{category}');")
+    conn.commit()
 
-def selectAllAnswersByQuestionId(questionId):
-  c.execute("SELECT rowid, descricao FROM resposta WHERE id_pergunta = ? ORDER BY favorito DESC;", str(questionId))
-  return c.fetchall()
 
-def insertAnswer(answerId, answers):
-  c.execute(f"INSERT INTO resposta VALUES('{answerId}', '{answers}', 0);")
-  conn.commit()
+def delete_category(category_id):
+    c.execute(f"DELETE FROM categoria WHERE rowid = ?;", str(category_id))
+    conn.commit()
 
-def incrementAnswerRank(answerId):
-  c.execute(f"UPDATE resposta set favorito = favorito + 1 where rowid = ?;", answerId)
-  conn.commit()
 
-def deleteAnswer(answerId):
-  c.execute(f"DELETE FROM resposta WHERE rowid = ?;", str(answerId))
-  conn.commit()
+def select_question_by_id(question_id):
+    c.execute("SELECT rowid, descricao FROM pergunta WHERE rowid = ?;", str(question_id))
+    return c.fetchall()
+
+
+def select_all_questions_by_category(category_id):
+    c.execute("SELECT rowid, descricao FROM pergunta WHERE id_categoria = ?;", str(category_id))
+    return c.fetchall()
+
+
+def insert_question(category_id, question):
+    c.execute(f"INSERT INTO pergunta VALUES('{category_id}', '{question}');")
+    conn.commit()
+
+
+def delete_question(question_id):
+    c.execute(f"DELETE FROM pergunta WHERE rowid = ?;", str(question_id))
+    conn.commit()
+
+
+def select_answer_by_id(answer_id):
+    c.execute("SELECT rowid, descricao FROM resposta WHERE rowid = ?;", str(answer_id))
+    return c.fetchall()
+
+
+def select_all_answers_by_question_id(question_id):
+    c.execute("SELECT rowid, descricao FROM resposta WHERE id_pergunta = ? ORDER BY favorito DESC;", str(question_id))
+    return c.fetchall()
+
+
+def insert_answer(answer_id, answers):
+    c.execute(f"INSERT INTO resposta VALUES('{answer_id}', '{answers}', 0);")
+    conn.commit()
+
+
+def increment_answer_rank(answer_id):
+    c.execute(f"UPDATE resposta set favorito = favorito + 1 where rowid = ?;", answer_id)
+    conn.commit()
+
+
+def delete_answer(answer_id):
+    c.execute(f"DELETE FROM resposta WHERE rowid = ?;", str(answer_id))
+    conn.commit()
