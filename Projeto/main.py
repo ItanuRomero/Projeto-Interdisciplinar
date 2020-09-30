@@ -1,13 +1,8 @@
-from database import initialize
+from database import *
 import administrator
 import visitor
 
-try:
-    initialize()
-except:
-    print('Erro na abertura do banco de dados.')
-else:
-    print('Tudo certo!')
+
 print('Bem vindo ao PinaTalk!\n')
 while True:
     print('\nQual tipo de usuário você é?\n')
