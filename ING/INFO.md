@@ -1,1 +1,0 @@
-# pasta para adicionar partes no contexto ingles
