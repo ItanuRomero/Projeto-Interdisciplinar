@@ -1,6 +1,7 @@
 # PINA_TALK
 
 ## Para mais informações favor verificar o documento que ficará disponível em uma das pastas acima!
+[Documentação](./DOCUMENTACAO) - [Orientações](./OrientaçõesProjetoInterdisciplinar) - [Código do projeto](./Projeto)
 
 ### Idealizado e realizado em conjunto com os alunos:
 - Gabriel Souza Pereira 
